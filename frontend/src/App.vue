@@ -15,6 +15,7 @@ import Row from './components/Row.vue';
 </template>
 
 <style scoped>
+
 /* Trochę podstawowego wyglądu, żeby gra była na środku ekranu */
 .app-container {
   display: flex;

@@ -1,10 +1,26 @@
-<script setup> //logika w js 
+<script setup> 
 import { ref } from 'vue'
-import viteLogo from '../assets/vite.svg'
-import heroImg from '../assets/hero.png'
-import vueLogo from '../assets/vue.svg'
+import {Row} from './Row.vue'
 
-const count = ref(0)
+const pegsPerRow = ref(4)
+const totalAttempts = ref(10)
+
+function createEmptyBoard(totalAttempts, pegsPerRow) {
+    const newBoard = []
+
+    for (let i = 0; i < totalAttempts; i++) {
+        const row = new Row(pegsPerRow)
+        newBoard.push(row)
+        
+
+    }
+    return newBoard;
+}
+  
+
+
+
+
 </script>
 
 <!-- kod html -->

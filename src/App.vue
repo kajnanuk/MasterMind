@@ -1,34 +1,26 @@
 <script setup>
 import { ref } from 'vue'
-
-
-const count = ref(0)
-function increment(num) {
-  count.value+=num
-}
-
-const decrement = () => {
-  count.value--
-}
-
-decrement()
+import GameBoard from './components/GameBoard.vue'
+import Row from './components/Row.vue';
 
 </script>
 
 
-
 <template>
-  
-  <h1>Mój pierwszy licznik Vue!</h1>
-  <button @click="decrement()" id='button123'>
-    Licznik to: {{ count }}
-  </button>
-
+  <div class="app-container">
+    
+    <GameBoard />
+    
+  </div>
 </template>
 
 <style scoped>
-#button123 {
-  font-weight: bold;
-  background-color: #42b983;
+/* Trochę podstawowego wyglądu, żeby gra była na środku ekranu */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: sans-serif;
+  margin-top: 50px;
 }
- </style>
+</style>

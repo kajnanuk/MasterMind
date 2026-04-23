@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 import Row from './Row.vue'
+import Peg from './Peg.vue'
 
 const totalAttempts = ref(10)
 
@@ -9,7 +10,7 @@ function createEmptyBoard() {
     for (let i = 0; i < totalAttempts.value; i++) {
         newBoard.push({
             active: i === 0,
-            pegs: new Array(4).fill(null),
+            pegs: new Array(4).fill(null), // 4 puste kulki
             feedback: { black: 0, white: 0 }
         })
     }

@@ -6,7 +6,7 @@ const props = defineProps({
   rowNumber: Number = null
 })
 
-const emit = defineEmits(['kliknieto-kulke'])
+const emit = defineEmits(['kliknieto-pole'])
 </script>
 
 <template>
@@ -42,7 +42,18 @@ const emit = defineEmits(['kliknieto-kulke'])
 <style scoped>
    #aktywny {
   font-weight: bold;
-  color: green;
+  color: rgb(16, 0, 107);
+
     }
+
+    .row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 18px;
+    background-color: #8f5a3a;
+    padding: 10px;
+    border-radius: 12px;
+  }
 </style>
 
